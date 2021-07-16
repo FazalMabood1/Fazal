@@ -1,0 +1,90 @@
+<div class="card" style="margin-right:-1rem;margin-left:-1rem;border-radius:0px">
+  <div class="d-flex justify-content-between">
+    <nav class="nav">
+
+
+      <a class="nav-link" href="#">Scholarship<i class="fa fa-caret-down"></i></a>
+      <a class="nav-link" href="#">Country<i class="fa fa-caret-down"></i></a>
+      <a class="nav-link" href="#">Deadline<i class="fa fa-caret-down"></i></a>
+      <a class="nav-link" href="#">Institution<i class="fa fa-caret-down"></i></a>
+      <a class="nav-link" href="#">Study Level<i class="fa fa-caret-down"></i></a>
+      <a class="nav-link" href="#">Validity<i class="fa fa-caret-down"></i></a>
+
+    </nav>
+  </div>
+</div>
+<p>We found {{totalCount}} Results</p>
+
+<div class="container" *ngFor="let item of scholarshipDetails">
+  <div class="row">
+    <div class="col-md-10">
+      <div class="card p-3 mb-2">
+        <div class="d-flex justify-content-between row">
+          <!--<div class="d-flex flex-row align-items-center col-md-5">-->
+            <div class="col-md-1"> <i class="fa fa-image" style="font-size:65px"></i> </div>
+            <div class="col-md-4 ms-2 c-details p-3">
+              <h3 class="mb-0">{{item.scholarshipType}}</h3>
+            </div>
+          <!--</div>-->
+          <div class="col-md-5">
+
+
+          </div>
+          <div class="col-md-2 row">
+            <div class="col-md-6"> <i class="fa fa-bookmark"></i></div>
+            <div class="col-md-6"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></div>
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="col-md-1">
+          </div>
+          <div class="col-md-9">
+            <p>{{item.scholarshipDetails}}</p>
+          </div>
+          <div class="col-md-3">
+          </div>
+        </div>
+    
+  
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-3">
+            <h5><i class="fa fa-clock-o"></i>{{item.lastDate}}</h5>
+            <p class="ml-4">Deadline</p>
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-2">
+            <h5><i class="fa fa-globe"></i>{{item.scholarshipValidity}}</h5>
+            <p class="ml-4">Validity</p>
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-2">
+            <h5><i class="fa fa-bell"></i>{{item.scholarshipFee}}</h5>
+            <p class="ml-4">Amount</p>
+          </div>
+        </div>
+        <div class=" row">
+          <div class="col-md-1"></div>
+          <div class="col-md-3">
+            <h5><i class="fa fa-graduation-cap"></i>{{item.degreeType}}</h5>
+            <p class="ml-4">Study Level</p>
+
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-2">
+            <h5><i class="fa fa-calendar"></i>{{item.inTake}}</h5>
+            <p class="ml-4">Intake(s)</p>
+          </div>
+
+        </div>
+       
+      </div>
+    </div>
+    <div class="col-md-2">
+
+
+    </div>
+  </div>
+</div>
